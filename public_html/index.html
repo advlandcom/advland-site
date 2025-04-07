@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Adventure Land Academy</title>
+  <meta charset="utf-8">
+  <link href='images/favicon.ico' rel='shortcut icon'>
+  <link href='http://fonts.googleapis.com/css?family=Unkempt' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.7.1.js" ></script>
+  <script src="js/scripts.js"></script>
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+	<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+		</div>
+	<![endif]-->
+<script type='text/javascript'>//<![CDATA[
+/**
+this script was written by Confluent Forms LLC http://www.confluentforms.com
+for the BlogXpertise website http://www.blogxpertise.com
+any updates to this script will be posted to BlogXpertise
+please leave this message and give credit where credit is due!
+**/
+// form id value, default is ss-form
+var formID	= 'ss-form';
+// your form's formkey value, taken from the form action URL
+var formKey	= '';
+// the id of your label field name for the captcha query
+var labelName	= 'ssTestLabel';
+// the id of your captcha field id for the query
+var testField	= 'ssTestValue';
+var submitted	= false;
+
+$(document).ready(function() {
+	var ssForm = $('#'+formID);
+
+	var randomInt = Math.floor((Math.random()*100)+1);
+	$('#'+testField).val('Please Type "' + randomInt + '" here.');
+  
+	ssForm.submit(function(evt){
+		if($('#'+testField).val() == randomInt){
+			// allow bubble with 'true' return value
+			ssForm.attr({'action' : 'https://docs.google.com/spreadsheet/formResponse?formkey=' + formKey + '&amp;embedded=true&amp;ifq'});
+			return true;
+		}else{
+			alert('You need to repeat the number "' + randomInt + '"');
+			// block bubble with 'false' return value
+			return false;
+		}
+	});
+});
+
+//]]></script>
+</head>
+<body>
+<div class="glob">
+<div class="page_spinner"><span></span></div>
+                    <div class="menuHolder">
+                             <nav class="menu">
+        				    	<ul id="menu">
+                                    <li class="with_ul">
+                                        <a href="#!/pageAbout"><div class="mText">about us</div></a>
+                                    </li>
+        					       	<li>
+                                        <a href="#!/pageProgram"><div class="mText">our program</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="private/index_private.html#!/photos"><div class="mText">photos</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#!/pageParents"><div class="mText">for parents</div></a>
+                                    </li>
+                                     <li class="_last">
+                                        <a href="#!/pageContact"><div class="mText">contacts</div></a>
+                                     </li>
+        					   </ul>
+        				    </nav>
+                        </div>
+<div class="main">
+    <div class="center">
+    <!--header -->
+        <header>
+            <div class="logoHolder">
+                <h1><a href="#!/pageAbout" id="logo">company name</a></h1>
+            </div>
+            <div class="_faq">
+                <div class="extra_text">
+                    <span class="extra2"></span>
+                    <span class="styleText1">did you know?</span>
+                    <span class="styleText2">Our Nursery School is</span>
+                </div>
+                <div class="sliderHolder">
+                    <div id="_slider">
+                        <div class="descr">
+                            <div class="slider_text">the school which provides the <span class="color1">best possible care </span> for children <span class="color2"> ages 1&frac12; - 6</span> ... </div>
+                        </div>
+                        <div class="descr">
+                            <div class="slider_text">the school which provides a <span class="color1">warm and caring</span> home-like environment within a structured, developmentally appropriate program ...</div>
+                        </div>
+                        <div class="descr">
+                            <div class="slider_text">where <span class="color2">Children</span> learn best through <span class="color1">play, discovery and hands on experiences</span>...</div>
+                        </div>
+						<div class="descr">
+							<div class="slider_text">where <span class="color2">Teachers</span> serve as guides who provide the children with <span class="color1">many opportunities</span> to grow and develop in a safe and nurturing environment...</div>
+                        </div>
+                    </div>
+                    <div id="sliderNavs">
+                        <div class="prevHolder">
+                            <a id="buttonPrev" href="#"><img src="images/prevSlider.png" alt=""></a>
+                        </div>
+                        <div class="nextHolder">
+                            <a id="buttonNext" href="#"><img src="images/nextSlider.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ </header>
+<!--header end-->
+			<!--content -->
+			<article id="content">
+				<ul>
+                    <li id="pageAbout">
+					   <div class="box marRight1">
+                            <div class="col2 back1">
+                                <span class="child1 posSet1"></span>
+                                    <div class="containerContent">
+                                        <h2>Hello!</h2>
+                                        <p><span class="styleText3">We
+believe</span><br> that each child is a unique individual who has the right to learn and grow in an environment
+centered on him. </p>
+                                    </div>
+                            </div>
+                       </div>
+                       <div class="box marRight1">
+                            <div class="col3 back2">
+                                <span class="child2 posSet2"></span>
+                                <div class="containerContent2">
+                                        <h2>Curriculum</h2>
+                                        <p>At <span class="styleText3">Adventure Land Academy</span>, children will have the opportunity to explore a diverse array of activities, encompassing arts and crafts, social interaction, physical activities, group engagement, and educational experiences. Our institution serves as an inventive support system, nurturing children's development throughout the day. We are not simply a childcare service; our focus is on actively engaging children, fostering their continuous learning, and enhancing existing skills.</p>
+                                        <a class="more color3" href="#!/pageCurriculum">More</span></a>
+                                    </div>
+                            </div>
+                       </div>
+                       <div class="box">
+                            <div class="col2 back3">
+                                <span class="child3 posSet3"></span>
+                                <div class="containerContent">
+                                        <h2>Photos</h2>
+                                        <figure class="_fig1">
+                                            <img src="images/page1pic1.png" alt="">
+                                             <a class="more3" href="private/index_private.html#!/photos"><img src="images/moreSprite2.png" alt=""></a>
+                                        </figure>
+                                    </div>
+                            </div>
+                       </div>
+                    </li>
+                     <li id="pageProgram">
+					   <div class="box marRight1">
+                            <div class="col2 back1">
+                                <span class="child2 posSet2"></span>
+                                <div class="containerContent">
+                                    <h2>Age<br>Groups</h2>
+										<ul class="_list1">
+											<li><a href="#!/pageGroupsTwos">Twos</a></li>
+											<li><a href="#!/pageGroupsTodlers ">Todlers</a></li>
+											<li><a href="#!/pageGroupsPreSchool">Pre-School</a></li>
+											<li><a href="#!/pageGroupsKindergarden">Kindergarden</a></li>
+											<!--li><a href="#">After School</a></li-->
+										</ul>
+									<!--a class="more color3 marTop2" href="#!/ageGroups">More</a-->
+
+                                </div>
+                            </div>
+                       </div>
+                       <div class="box marRight1">
+                            <div class="col3 back2">
+                            	<span class="child1 posSet4"></span>
+                                <div class="containerContent2">
+                                    <h2>Program<br>Enrichments</h2>
+                                        <ul class="_list1 marTop1">
+                                        	<li><a href="#!/pageEnrichments">Gymnastics</a></li>
+                                        	<li><a href="#!/pageEnrichments">Music program</a></li>
+                                        	<li><a href="#!/pageEnrichments">Martial Arts</a></li>
+                                        	<li><a href="#!/pageEnrichments">Dance</a></li>
+                                        	<li><a href="#!/pageEnrichments">Chess</a></li>
+                                        	<li><a href="#!/pageEnrichments">Art</a></li>
+                                        	<li><a href="#!/pageEnrichments">Foreign Language</a></li>
+                                        </ul>
+                                   <!--a class="more color3 marTop2" href="#!/pageEnrichments">More</a-->
+                                </div>
+                            </div>
+                       </div>
+                       <div class="box">
+                            <div class="col2 back3">
+                                <span class="child3 posSet3"></span>
+                                <div class="containerContent">
+                                    <h2>Summer<br>Camp</h2>
+                                        <ul class="_list1 marTop1">
+                                        	<li><a href="#!/pageSummerCamp">Pool</a></li>
+                                        	<li><a href="#!/pageSummerCamp">Soccer</a></li>
+                                        	<li><a href="#!/pageSummerCamp">Field Trips</a></li>
+                                        	<li><a href="#!/pageSummerCamp">Arts and Crafts</a></li>
+                                        </ul>
+                                   <!--a class="more color3 marTop2" href="#!/enrichments">More</a-->
+                                </div>
+                            </div>
+                       </div>
+					</li>
+                    <li id="pageParents">
+					   <div class="box marRight1">
+                            <div class="col3 back1">
+	                             <span class="child2 posSet5"></span>
+                                 <div class="containerContent2">
+                                    <h2>Enrollment</h2>
+										<p>Thank you so much for your interest in Adventure Land Academy, and welcome to our unique and proven early childhood education community!
+										We strongly believe that our students are enriched in ways that go above and beyond all others. The reasons why we're the best in our field directly reflect our core values - Adventure Land's formula for success:
+										We select the best teachers to work in the best environment with the best resources.
+										We add accountability, acknowledgement and affordability.
+										The result? Happy children engaged in learning - delightful little explorers, athletes, scientists, journalists and scholars, using their whole beings and behavior to discover the world from a place of safety and comfort.<p>
+
+                                        <a class="more color3 marTop3 marLeft3" href="private/alnsParentForms.pdf">Forms</a>
+                                </div>
+                            </div>
+                       </div>
+
+					   <div class="box marRight1">
+                            <div class="col2 back2">
+                                 <div class="containerContent">
+                                    <h2>Home-style<br>meals</h2>
+                                        <p>School serves healthy, family-style gourmet lunches to students to help them learn good table manners, healthy eating habits and how to serve themselves.</p>
+										<a class="more color3" href="https://docs.google.com/document/d/12etyQll5ngw_gSHPpQR3E48W2CrYyW3v7YNR9B880bE/pub">Menu</a>
+                                 </div>
+                            </div>
+                       </div>
+                       <div class="box">
+                            <div class="col2 back4">
+                                <span class="child4 posSet4"></span>
+                                    <div class="containerContent">
+                                        <h2>School Hours</h2>
+                                        <p>We are open 5 days a week, Monday throught Friday from 7:00am till 7:00pm.</p>
+
+                                     </div>
+                            </div>
+                       </div>
+                    </li>
+                    <li id="pageContact">
+                        <div class="box marRight1">
+                            <div class="col3 back1">
+                                <span class="child2 posSet5"></span>
+                                <div class="containerContent2">
+                                    <h2>Contact Info</h2>
+                                       <div class="col1 marBot1">
+                                           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12060.206688394435!2d-74.0706081!3d40.9146129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf22977da63d0d81e!2sAdventure%20Land%20Academy%20Nursery%20School!5e0!3m2!1sen!2sus!4v1639757899944!5m2!1sen!2sus" width="380" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                         
+                                        </div>
+					<div >
+                                            
+                                           <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "322276207981540");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+                                        </div>
+                                        <div class="col1">
+                                            <div class="col4 marRight4">
+                                                <p class="padNull">Adventure Land Academy<br>76 S Farview Ave,<br>Paramus, NJ 07652</p>
+                                            </div>
+                                            <div class="col5">
+                                                <p>
+						    <span class="space1">Telephone:</span>201 803 8796<br>
+                                                    <span class="space1">Telephone:</span>201 342 7001<br>
+                                                    <span class="space1">FAX:</span>201 808 2734<br>
+                                                    <span>E-mail:&nbsp;<a class="_link2" href="mailto:">advland.com@gmail.com</a></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                 </div>
+                            </div>
+                       </div>
+                       <div class="box" >
+                            <div class="col3 back3">
+                                <div class="containerContent2">
+                                    <h2>Get in Touch</h2>
+
+<!-- iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZUNonpTbmzdm6gJBMwLdrPUEAmxrYPVYOQZhT1W1OQ5RCNQ/viewform?embedded=true" width="450" height="340" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe-->
+
+									 <!--iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe-->
+
+
+                                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSeZUNonpTbmzdm6gJBMwLdrPUEAmxrYPVYOQZhT1W1OQ5RCNQ/formResponse?embedded=true" method="POST"  id="ContactForm" target="hidden_iframe">
+										<div class="success"> Contact form submitted!&nbsp;We will be in touch soon.</div>
+											<fieldset class="left">
+												<div class="block">
+													<label class="name">
+														<span class="bg"><input type="text" value="Name:" class="input marNone" name="entry.756781437" id="entry.756781437"></span>
+														<span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>
+													</label>
+													<label class="email">
+														<span class="bg"><input type="email" value="E-mail:" class="input marNone" name="entry.499229149" id="entry.499229149"></span>
+														<span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span>
+													</label>
+
+												</div>
+												<div class="block">
+													<label class="message">
+														<span class="bg"><textarea rows="1" cols="2" name="entry.2058100447" id="entry.2058100447">Message:</textarea></span>
+														<span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+													</label>
+												 </div>
+												 
+													
+
+												 <div class="formButtons">
+ 													 <div class="formBtn">
+														 <a href="#" data-type="reset" class="more color8">Clear</a>
+                                                    </div>
+													<div class="formBtn">
+														<!-- input type="hidden" name="draftResponse" value="[]">
+														<input type="hidden" name="pageHistory" value="0">
+														<input type="hidden" name="fbzx" value="-2406116978348428812"-->
+														<a href="#" data-type="submit" class="more color8">Send</a>
+													</div>
+												 </div>
+											</fieldset>
+									</form>
+
+
+
+<!--form action="https://docs.google.com/forms/d/1jFRMO-iwWGAoPPN9tLVE2CBA2NpfxZu1TlVNfb8XK-k/formResponse" method="POST" id="ss-form" target="_self" >
+<input type="text" name="entry.681829641" value="" class="ss-q-short" id="entry_681829641" dir="auto" aria-label="Name  " title="">
+<input type="text" name="entry.1137352965" value="" class="ss-q-short" id="entry_1137352965" dir="auto" aria-label="Email  " title="">
+<textarea name="entry.405847297" rows="8" cols="0" class="ss-q-long" id="entry_405847297" dir="auto" aria-label="Message  "></textarea>
+<input type="hidden" name="draftResponse" value="[,,&quot;-8524836813646013887&quot;]">
+<input type="hidden" name="pageHistory" value="0">
+<input type="hidden" name="fbzx" value="-8524836813646013887">
+</form-->
+                                </div>
+                            </div>
+                       </div>
+					</li>
+                   	<li id="pagePrivacy">
+                    	<div class="box">
+                            <div class="col9 back1">
+                                <span class="child2 posSet5"></span>
+                                <div class="containerContent3">
+                                    <h2>Privacy Policy</h2>
+
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">This privacy policy discloses the privacy practices for <span style="text-decoration: underline;">www.advland.com</span>. This privacy policy applies solely to information collected by this web site. It will notify you of the following: </span></span></p>
+<ol type="1">
+<li style="line-height: normal;">
+<div align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared. </span></span></div>
+</li>
+<li style="line-height: normal;">
+<div align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">What choices are available to you regarding the use of your data. </span></span></div>
+</li>
+<li style="line-height: normal;">
+<div align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">The security procedures in place to protect the misuse of your information. </span></span></div>
+</li>
+<li style="line-height: normal;">
+<div align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">How you can correct any inaccuracies in the information. </span></span></div>
+</li>
+</ol>
+<p style="line-height: normal;" align="left"><strong><span style="font-family: 'Verdana','sans-serif';"><span style="font-size: medium;">Information Collection, Use, and Sharing</span></span></strong><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';"> <br>We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy. </span></span></p>
+<p style="line-height: normal;" align="left"><strong><span style="font-family: 'Verdana','sans-serif';"><span style="font-size: medium;">Your Access to and Control Over Information</span></span></strong><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';"> <br>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website: </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">&nbsp;&nbsp;&nbsp;  </span><span style="font-family: 'Verdana','sans-serif';">See what data we have about you, if any. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">&nbsp;&nbsp;&nbsp;  </span><span style="font-family: 'Verdana','sans-serif';">Change/correct any data we have about you. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">&nbsp;&nbsp;&nbsp;  </span><span style="font-family: 'Verdana','sans-serif';">Have us delete any data we have about you. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">&nbsp;&nbsp;&nbsp;  </span><span style="font-family: 'Verdana','sans-serif';">Express any concern you have about our use of your data. </span></span></p>
+<p style="line-height: normal;" align="left"><strong><span style="font-family: 'Verdana','sans-serif';"><span style="font-size: medium;">Security</span></span></strong><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';"> <br>We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment. </span></span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><strong><span style="font-family: 'Verdana','sans-serif';">Updates</span></strong> </span></p>
+<p style="line-height: normal;" align="left"><span style="font-size: medium;"><span style="font-family: 'Verdana','sans-serif';">Our Privacy Policy may change from time to time and all updates will be posted on this page.</span> </span></p>
+<p style="line-height: normal;" align="left"><strong><span style="font-family: 'Verdana','sans-serif';"><span style="font-size: medium;">If you feel that we are not abiding by this privacy policy, you should contact us immediately via email</span>.</span></span></strong></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+					<li id="pageCurriculum">
+                    		<div class="box">
+                            <div class="col7 back1">
+                                <span class="child2 posSet5"></span>
+                                <div class="containerContent3">
+                                    <h2>Curriculum</h2>
+                                    <p>
+                                  <span class="styleText3">Cognitive Development </span><br>
+								  Children have the opportunity to develop concepts of math, science, and social studies through such activities as building with blocks, measuring and pouring sand and water, or ingredients for cooking, observing changes in the seasons, and caring for animals in the classroom, Through creative and dramatic play involving such equipment as housekeeping centers, dress-ups, puzzles and games, imagination and social skills are developed.<br><br>
+
+								  <span class="styleText3">Language Development  </span><br>
+								  Children need many opportunities to see how reading, writing, and language are useful before beginning any instruction in letter sounds and words.  Activities which promote readiness and language development include stories read and told by children and teachers, poems, drawings accompanied by stories dictated by children, and job charts in the classroom, all of which show language in print form.  Talking with other children during play and talking informally with teachers, as well as dramatic play enhance language development.<br><br>
+
+								  <span class="styleText3">Sensory Development  </span><br>
+								  Children have many opportunities to observe, taste, touch and listen as they explore the surrounding environment. Cooking experiences and field trips enhance scientific concepts as the classroom expands beyond its four walls.
+								  Aesthetic Development
+								  Daily art and handwork activities provide opportunities for individual experimentation and creativity utilizing a wide variety of materials.  Our music program includes singing, listening for appreciation, playing rhythm instruments and participation in rhythmic activities and dancing.<br><br>
+
+								  <span class="styleText3">Motor Skills  </span><br>
+								  Our outdoor playground is well equipped and designed to stimulate imaginations as large motor skills are developed while climbing and riding on toys chosen for safety and challenge.  Daily outdoor play allows children to be free to express themselves loudly and energetically! Small motor skills are developed through the use of play activities such as pegboards, puzzles, scissors, painting and clay.
+								  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+					<li id="pageEnrichments">
+                    		<div class="box">
+                            <div class="col9 back1">
+                                <span class="child2 posSet5"></span>
+                                <div class="containerContent3">
+									<h2>Program Enrichments</h2>
+									<p>
+									Adventure Land supports its academic curriculum with specially selected programs and activities designed to expand our students knowledge and experience in health and wellness, communication and expression, music, dance and martial arts.
+									<br>
+									<br>
+									Many of these enrichments are available to all Adventure Land students as part of their daily learning, at no additional fee:
+									<br>
+									<span class="styleText3">Gymnastics</span> - This pre-school gymnastics program is designed for boys and girls aged 2-6. Using a variety of equipment such as bars, beams and vaults, instructors highlight your little athlete's skills by incorporating various music, shapes and visual aids. Each week brings a new and exciting curriculum to encourage your child's physical ability. This non-competitive program will challenge, excite and reward your child.
+									<br>
+									<span class="styleText3">Music program</span> - Age-appropriate music experience program gives your child the chance to explore an assortment of instruments, songs and creative movement. Every lesson includes music appreciation, singing, ear training, rhythmic patterns and the fundamentals of music. Activities are intended to promote physical and cognitive development, while enjoying a creative experience. Music education has been proven to improve concentration, memory and self-expression.
+									<br>
+									<span class="styleText3">Dance</span> - Led by trained, professional instructors, our age-appropriate dance classes let children creatively express themselves while learning and practicing the movement techniques of latin dance and hip-hop. Additional dance techniques are taught for older children. Anual school shows let family members witness the success of their tiny, skilled dancers.
+									<br>
+									<br>
+
+									Other extracurricular classes are available at many of our schools for a reasonable fee. Please ask school director for information regarding a particular program:
+									<br>
+									<span class="styleText3">Martial Arts</span> - Our specially designed Taekwondo program features focused classes that advance students at their own pace, as they practice martial arts basics and techniques for self-protection. Not only do children strengthen their flexibility and stamina through the practice of martial arts, but they also develop strong character.
+									<br>
+									<span class="styleText3">Chess</span> - These classes  provide a multitude of benefits to our young strategists! Children who play chess have been shown to improve their math and reading skills, but the benefits go far beyond academic.
+									<br>
+									<span class="styleText3">Foreign Language</span> -
+										Foreign Language will give students at each school a jump start at learning a second language.
+										According to the American Council on the Teaching of Foreign Languages, learning a second language at an early age: has a positive effect on intellectual growth.
+										Enriches and enhances a child's mental development. Leaves students with more flexibility in thinking, greater sensitivity to language, and a better ear for listening.
+										Improves a child's understanding of his/her native language; Gives a child the ability to communicate with people s/he would otherwise not have the chance to know.
+										Opens the door to other cultures and helps a child understand and appreciate people from other countries.
+  								  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="pageGroupsTwos">
+							<div class="box">
+							<div class="col9 back2">
+								<span class="child4 posSet2"></span>
+								<div class="containerContent3">
+
+
+									<h2>Twos 18 months - 3 years</h2>
+									<p>
+									Tows are transitioning from the utter dependence of infancy to the more mobile, independent world of todlers. They are learning in leaps and bounds how to communicate, move purposefully and assert their individuality.
+									At Adventure Land, our teachers introduce routines and offer positive guidance to help give our child the confidence to practice new skills and embrace new experiences. Weekly, theme-based learning plans meet the diverse needs of every child through researched activities. This consistent-yet-changing, low-ratio atmosphere matches your child's rapidly emerging interests and abilities, and offers many opportunities for early reading, math, science, construction and imaginative play learning experiences.
+									<br>
+									<br>
+									<span class="styleText3">CURRICULUM COMPONENTS</span> <br>
+									<span class="styleText5">Language Development</span><br>
+									Our teachers: respect our toddlers' varied stages of language;
+										speak clearly and frequently to all the children;
+										use books, rhyming songs and fingerplays to promote the use of speech in social settings.
+									<br>
+									<br>
+									<span class="styleText5">Physical Development</span><br>
+									We foster the next level of physical development through:
+										rhythm games and dancing, to help your toddler learn the joys of physical expression;
+										coloring, painting, gluing, working puzzles and building with blocks, to help your child refine fine motor skills; and
+										climbing, hopping and tumbling in our secure and closely monitored indoor and outdoor play areas.
+									<br>
+									<br>
+									<span class="styleText5">Social/Emotional Development</span><br>
+									Our teachers:
+										guide and model positive interactions for our children;
+										cultivate a classroom culture of respect for children's needs and feelings;
+										acknowledge and encourage empathy;
+										nurture independent activity and foster peer relationships; and support self-help skills.
+									<br>
+									<br>
+									<span class="styleText5">Cognitive Development</span><br>
+									We help your toddler develop critical learning skills through:
+										guessing and listening games;
+										cause-and-effect activities;
+										a variety of toys your child can stack, sort, match or count;
+	areas for sensory experiences, artistic expression and pre-writing opportunities; and guidance and encouragement of problem-solving skills.
+
+
+								  </p>
+								</div>
+							</div>
+						</div>
+                    </li>
+ 					<li id="pageGroupsTodlers">
+							<div class="box">
+							<div class="col9 back3">
+								<span class="child3 posSet7"></span>
+								<div class="containerContent3">
+
+
+									<h2>Todlers 3 - 4 years</h2>
+									<p>
+										Todlers are eager learners with growing energy and interests. They are ready for more independence as they pursue their natural curiosity to explore and discover. They can be challenged more, but they can also be more challenging!
+										At Adventure Land Academy, our highly trained teachers prepare weekly, theme-based learning plans that respond to the stages and interests of each individual child, as well as to the group as a whole. Daily schedules and other routines help nurture your child's trust and confidence. Low-ratio learning centers serve as hubs for activities related to pre-literacy, math, science, computers, dramatic and sensory play, art and music.
+										<br>
+										<br>
+										<span class="styleText3">CURRICULUM COMPONENTS</span> <br>
+										<span class="styleText5">Language Development</span> <br>
+											Phonetic awareness is promoted through books, songs and activities.
+											Literature is introduced in displays, reading and conversations.
+											Print concepts  such as letter and word recognition, and learning to track left to right and top to bottom are illustrated and practiced.
+											Vocabulary builds as words are introduced through stories and reinforced through play.
+											Letter names, shapes and sounds are emphasized in many activities.
+											Teachers model correct grammar and sentence structure.
+										<br>
+										<br>
+										<span class="styleText5">Physical Development</span> <br>
+											Vigorous exercise happens daily, both inside and outside.
+											Climbing, dancing, running, and throwing, rolling and kicking balls help develop coordination and strength.
+											A variety of toys, games and writing materials help develop finer muscles and motor skills.
+											Healthy eating habits are established through family-style meals and self-serve snacks.
+										<br>
+										<br>
+										<span class="styleText5">Social/Emotional Development</span> <br>
+											We encourage your todler to:
+												explore and discover within our secure, supportive environment;
+												identify their own feelings;
+												empathize with other's feelings;
+												recognize the rights of others;
+												create healthy, friendly peer relationships;
+												develop means of self-expression and self-direction; and
+												follow simple routines and rules, helping internalize a sense of structure.
+										<br>
+										<br>
+										<span class="styleText5">Cognitive Development</span> <br>
+											We help your preschooler develop critical learning skills through:
+												providing materials for stacking, sorting, matching, counting and one-to-one correspondence;
+												offering opportunities to practice increasingly complex problem-solving;
+												demonstrating the concept of cause-and-effect via scientific observations in nature;
+												open-ended art projects and dramatic play, to spur creativity and imagination; and
+												open-ended questions, to spur critical thinking.
+
+								  </p>
+								</div>
+							</div>
+						</div>
+                    </li>
+                   <li id="pageGroupsPreSchool">
+							<div class="box">
+							<div class="col9 back4">
+								<span class="child1 posSet2"></span>
+								<div class="containerContent3">
+
+
+									<h2>Pre-school 4 - 5 years</h2>
+									<p>
+									Four- and five-year-olds are all about self-expression, and are beginning to consider what others are thinking and feeling, too. They need a strong underpinning of natural curiosity, cooperation, confidence, communication skills, and a healthy dose of learning excitement as they get ready to go to kindergarten.<br>
+									At Adventrue Land, our credentialed educators know that research shows early literacy competency is a strong indicator of not only literacy, but also overall academic success once a student reaches school age. So our pre school curriculum concentrates upon literacy-awareness activities, such as:
+										letter recognition and letter sounds;
+										recognition of classmate names;
+										storytelling;
+										story development anticipation;
+										print concepts;
+										letter writing and early spelling through phonics;
+										writing; and other literacy opportunities within classroom learning centers.
+
+More structured planning, lower ratios and regular routines help establish the stability and consistency students need to feel sure of themselves, and help move them toward the scheduled environment of school. Classroom learning centers are altered weekly to correlate to the learning plan, and sustain students' interest and involvement.
+									<br>
+									<br>
+									<span class="styleText3">CURRICULUM COMPONENTS</span> <br>
+									<span class="styleText5">Language Development</span><br>
+									Students learn to:
+											use new sounds and words;
+											connect letters with sounds;
+											use letters representing sounds as they practice writing words;
+											complete more complex sentence structures;
+											retell stories and connect various narrative events;
+											follow multi-step directions; and
+											give detailed answers to complex questions.
+									<br>
+									<br>
+									<span class="styleText5">Physical Development</span><br>
+									Continued physical development of your student is enhanced through:
+										fun activities and games that involve vigorous climbing, jumping and running;
+										learning to throw balls at targets and to catch thrown balls; and
+	printing letters, drawing specific shapes and stringing objects together finer skills that prepare students for the sort of manipulative tasks they will encounter in kindergarten.
+									<br>
+									<br>
+									<span class="styleText5">Social/Emotional Development</span><br>
+									Students practice their independence and self-reliance as they acquire a sense of accomplishment and responsibility from completing tasks.
+	Students practice cooperation and especially empathic understanding of others as these qualities are consistently recognized and reinforced in preparation for the emotional and social environment of the kindergarten classroom.
+									<br>
+									<br>
+									<span class="styleText5">Cognitive Development</span><br>
+									Students' problem-solving skills develop, as they learn to understand, explain and practice the concept of cause-and-effect.
+										Students categorization skills develop, as they learn to sort objects by group and subgroup.
+										Students higher-level thinking develops, as they learn how to measure, identify patterns and return to tasks they began earlier.
+										Students math skills develop, as they learn to count and identify one-to-one associations for numbers 1 - 10.
+	Students creativity and imaginative expression develop, as they continue with art, dramatic play and role-playing.
+
+
+								  </p>
+								</div>
+							</div>
+						</div>
+                    </li>
+ 					<li id="pageGroupsKindergarden">
+							<div class="box">
+							<div class="col6 back1">
+								<span class="child4 posSet5"></span>
+								<div class="containerContent3">
+
+
+									<h2>Kindergarden</h2>
+									<p>
+									Your child's kindergarten experience should be exceptional! Research shows that the success children achieve during this year is a major indicator of future academic success. Our comprehensive, nationally recognized and accelerated kindergarten curriculum implemented by experienced, certified teachers  builds the foundation to ensure the following years are equally exceptional!
+									You want this important year to be the very best for your child, and you will find that at Adventure Land Academy. Our kindergartners discover their potential, eagerly explore new concepts and are inspired to be adventurous learners.
+									<br><br>
+									Our program, prestigious curriculum and long-term experience with school districts ensure school readiness and success for your child.
+
+								  </p>
+								</div>
+							</div>
+						</div>
+                    </li>
+					<li id="pageSummerCamp">
+							<div class="box">
+							<div class="col6 back3">
+								<span class="child3 posSet6"></span>
+								<div class="containerContent3">
+
+
+									<h2>Summer Camp</h2>
+									<p>
+									Our year-round developmental learning curriculum continues through the summer to provide your children with intellect-stimulating programming, health and wellness education and character-building activities disguised as fun! <br>
+									Make your child's summer a whole-child adventure that will nourish his or her mind, body and spirit!
+
+								  </p>
+								</div>
+							</div>
+						</div>
+                    </li>
+				</ul>
+			</article>
+			<!--content end-->
+            </div>
+		</div>
+        <!--footer -->
+            <footer>
+				<div class="divider1"></div>
+                <div class="mainFooter">
+                    <div class="privHold">
+                        <div class="followHolder">
+                            <ul>
+                                <li><a href="#"><img src="images/followIcon1.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/followIcon2.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <pre class="textPrivacy">Adventure Land Academy &copy; 2021  <span class="extra1"></span> <a class="_link1" href="#!/pagePrivacy">Privacy Policy</a></pre>
+                    </div>
+                </div>
+                <div class="divider1"></div>
+			</footer>
+           	<!--footer end-->
+</div>
+<script>
+$(window).load(function() {
+	$('.page_spinner').fadeOut();
+	$('body').css({overflow:'auto', 'min-height':'820px'})
+})
+</script>
+</body>
+</html>
